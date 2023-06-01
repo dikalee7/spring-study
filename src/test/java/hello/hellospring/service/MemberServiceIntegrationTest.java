@@ -14,7 +14,7 @@ class MemberServiceIntegrationTest {
     @Autowired MemberService memberService;
     @Autowired MemberRepository memberRepository;
     @Test
-    public void 회원가입() throws Exception {
+    public void 회원가입() {
         //Given
         Member member = new Member();
         member.setName("hello");
@@ -25,7 +25,7 @@ class MemberServiceIntegrationTest {
         assertEquals(member.getName(), findMember.getName());
     }
     @Test
-    public void 중복_회원_예외() throws Exception {
+    public void 중복_회원_예외() {
         //Given
         Member member1 = new Member();
         member1.setName("spring");
