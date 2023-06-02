@@ -12,7 +12,8 @@ import java.util.Date;
 public class Member {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -29,11 +30,11 @@ public class Member {
         this.created_on = created_on;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
